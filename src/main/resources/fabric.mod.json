@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "villager_decorum",
+	"version": "${version}",
+	"name": "Villager Decorum",
+	"description": "Villagers sit on cushions by their workstations, beds and the bell.",
+	"authors": [
+		"Jaubert"
+	],
+	"contact": {},
+	"license": "ARR",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"villagerdecorum.VillagerDecorum"
+		],
+		"modmenu": [
+			"villagerdecorum.client.ModMenuCompat"
+		]
+	},
+	"mixins": [
+		"villager_decorum.mixins.json",
+		{
+			"config": "villager_decorum.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}

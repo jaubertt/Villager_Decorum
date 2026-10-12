@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "villagerdecorum.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "VillagerModelMixin",
+    "VillagerRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

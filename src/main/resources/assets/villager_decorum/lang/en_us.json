@@ -1,0 +1,12 @@
+{
+  "villager_decorum.settings.title": "Villager Decorum Settings",
+  "villager_decorum.settings.section": "Villagers Sit on Cushions",
+  "villager_decorum.settings.workstations": "Workstations",
+  "villager_decorum.settings.workstations.tooltip": "Lets Villagers sit on Cushions in front of or beside their Workstation. They keep working from there.",
+  "villager_decorum.settings.beds": "Beds",
+  "villager_decorum.settings.beds.tooltip": "Lets Villagers sit on Cushions within 5 blocks of their Bed during free time, or when they have no job.",
+  "villager_decorum.settings.bells": "Bells",
+  "villager_decorum.settings.bells.tooltip": "Lets Villagers sit on Cushions within 10 blocks of the Bell during gathering time.",
+  "modmenu.summaryTranslation.villager_decorum": "Villagers sit on cushions by their workstations, beds and the bell.",
+  "modmenu.descriptionTranslation.villager_decorum": "Villagers sit on cushions by their workstations, beds and the bell."
+}
