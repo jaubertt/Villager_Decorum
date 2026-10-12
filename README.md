@@ -58,4 +58,4 @@ https://github.com/jaubertt/Villager_Decorum/issues
 
 ## License
 
-All rights reserved (see LICENSE).
+MIT (see LICENSE).

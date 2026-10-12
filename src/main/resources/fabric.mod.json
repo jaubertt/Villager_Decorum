@@ -8,7 +8,8 @@
 		"Jaubert"
 	],
 	"contact": {},
-	"license": "ARR",
+	"license": "MIT",
+	"icon": "assets/villager_decorum/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
