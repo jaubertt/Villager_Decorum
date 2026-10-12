@@ -15,11 +15,18 @@ import net.fabricmc.loader.api.FabricLoader;
 
 public final class DecorumConfig {
 	private static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
+	public static final int MAX_RADIUS = 16;
 	private static volatile DecorumConfig current = new DecorumConfig();
 
 	public boolean workstations = true;
 	public boolean beds = true;
 	public boolean bells = true;
+	public int bedRadius = 5;
+	public int bellRadius = 10;
+
+	public static int clampRadius(int radius) {
+		return Math.max(1, Math.min(MAX_RADIUS, radius));
+	}
 
 	public static DecorumConfig get() {
 		return current;

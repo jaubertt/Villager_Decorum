@@ -7,6 +7,12 @@
   "villager_decorum.settings.beds.tooltip": "Lets Villagers sit on Cushions within 5 blocks of their Bed during free time, or when they have no job.",
   "villager_decorum.settings.bells": "Bells",
   "villager_decorum.settings.bells.tooltip": "Lets Villagers sit on Cushions within 10 blocks of the Bell during gathering time.",
+  "villager_decorum.settings.radius_section": "Search Radius",
+  "villager_decorum.settings.blocks": "%s blocks",
+  "villager_decorum.settings.bed_radius": "Bed Radius",
+  "villager_decorum.settings.bed_radius.tooltip": "How far from their Bed Villagers look for Cushions. From 1 to 16 blocks.",
+  "villager_decorum.settings.bell_radius": "Bell Radius",
+  "villager_decorum.settings.bell_radius.tooltip": "How far from the Bell Villagers look for Cushions. From 1 to 16 blocks.",
   "modmenu.summaryTranslation.villager_decorum": "Villagers sit on cushions by their workstations, beds and the bell.",
   "modmenu.descriptionTranslation.villager_decorum": "Villagers sit on cushions by their workstations, beds and the bell."
 }

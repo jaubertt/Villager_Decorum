@@ -16,18 +16,25 @@ import net.minecraft.world.phys.AABB;
 import org.jspecify.annotations.Nullable;
 
 public enum Spot {
-	WORKSTATION(Activity.WORK, MemoryModuleType.JOB_SITE, 1),
-	BED(Activity.IDLE, MemoryModuleType.HOME, 5),
-	BELL(Activity.MEET, MemoryModuleType.MEETING_POINT, 10);
+	WORKSTATION(Activity.WORK, MemoryModuleType.JOB_SITE),
+	BED(Activity.IDLE, MemoryModuleType.HOME),
+	BELL(Activity.MEET, MemoryModuleType.MEETING_POINT);
 
 	private final Activity activity;
 	private final MemoryModuleType<GlobalPos> place;
-	private final int reach;
 
-	Spot(Activity activity, MemoryModuleType<GlobalPos> place, int reach) {
+	Spot(Activity activity, MemoryModuleType<GlobalPos> place) {
 		this.activity = activity;
 		this.place = place;
-		this.reach = reach;
+	}
+
+	public int reach() {
+		DecorumConfig config = DecorumConfig.get();
+		return switch (this) {
+			case WORKSTATION -> 1;
+			case BED -> DecorumConfig.clampRadius(config.bedRadius);
+			case BELL -> DecorumConfig.clampRadius(config.bellRadius);
+		};
 	}
 
 	public Activity activity() {
@@ -55,7 +62,7 @@ public enum Spot {
 	}
 
 	public AABB searchArea(BlockPos place) {
-		return new AABB(place).inflate(this.reach);
+		return new AABB(place).inflate(this.reach());
 	}
 
 	public boolean fits(ServerLevel level, Villager villager, BlockPos place, Cushion cushion) {
@@ -64,7 +71,8 @@ public enum Spot {
 		int dy = at.getY() - place.getY();
 		int dz = at.getZ() - place.getZ();
 		if (this != WORKSTATION) {
-			return Math.abs(dx) <= this.reach && Math.abs(dy) <= this.reach && Math.abs(dz) <= this.reach;
+			int reach = this.reach();
+			return Math.abs(dx) <= reach && Math.abs(dy) <= reach && Math.abs(dz) <= reach;
 		}
 		if (dy != 0 || Math.abs(dx) + Math.abs(dz) != 1) {
 			return false;

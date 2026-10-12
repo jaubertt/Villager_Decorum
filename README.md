@@ -2,33 +2,34 @@
 
 By Jaubert.
 
-Villagers sit on cushions by their workstation, near their bed and around the bell.
+Villagers sit on Minecraft's 26.3 cushions close to the Points Of Interest: by the workstations, near their bed and around the bell.
 
 - At work, a villager sits on a cushion placed in front of or beside its workstation (touching it, not diagonally), faces the workstation and keeps working from there.
-- In free time, or when it has no job, it sits on cushions within 5 blocks of its bed.
-- At gathering time, it sits on cushions within 10 blocks of the bell.
+- In free time, or when it has no job, it sits on cushions within 5 blocks of its bed (1 to 16 in the settings).
+- At gathering time, it sits on cushions within 10 blocks of the bell (1 to 16 in the settings).
 - Each time it stays seated for 30 to 60 seconds, then gets up and walks around before sitting again.
 - Baby villagers don't sit.
 - Cushions on the low step of stairs work as benches: near beds and the bell, villagers sit facing away from the back of the stairs.
-- The cushions are the ones already in the game, crafted from 3 wool slabs.
 - Works together with Villager Manners.
   https://github.com/jaubertt/Villager_Manners
 
 ## Settings
 
-Each place has its own switch, all on by default. With Mod Menu installed, open Mods, select Villager Decorum and click the settings button.
+Each Point Of Interest has its own switch, all on by default. With Mod Menu installed, open Mods, select Villager Decorum and click the settings button.
 
 | Switch | Villagers sit on cushions |
 | --- | --- |
 | Workstations | Touching their workstation, while they work |
-| Beds | Within 5 blocks of their bed, in free time or when they have no job |
-| Bells | Within 10 blocks of the bell, at gathering time |
+| Beds | Within the bed radius of their bed, in free time or when they have no job |
+| Bells | Within the bell radius of the bell, at gathering time |
+| Bed Radius | How far from the bed villagers look for cushions: 1 to 16 blocks, 5 by default |
+| Bell Radius | How far from the bell villagers look for cushions: 1 to 16 blocks, 10 by default |
 
-Settings are saved in config/villager_decorum.json. On a dedicated server, edit that file while the server is stopped.
+Settings are saved in config/villager_decorum.json.
 
 If you remove the mod, villagers that were sitting stay on their cushions until the cushion is broken.
 
-The server needs the mod for villagers to sit. Players who also install it see them sitting; players without it see them standing on the cushion.
+Servers need the mod for villagers to sit. Players who also install it see them sitting; players without it see them standing on the cushion.
 
 ## Requirements
 
